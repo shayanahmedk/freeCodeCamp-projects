@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+  <!-- HEAD START-->
+  <head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8">
+    <title>Survey Form</title>
+  </head>
+  <!-- HEAD END -->
+  <!-- BODY START -->
+  <body>
+    <div class="container">
+      <!-- HEADER -->
+      <div class="header">
+        <h1 id="title">CodeWars Survey Form</h1>
+        <p id="description">Thank you for taking the time to help imrove this platform!</p>
+      </div>
+      <!-- SURVEY FORM -->
+      <form id="survey-form" class="survey">
+        <!-- NAME -->
+        <div class="form-content">
+          <label for="name" class="" id="name-label">Name</label>
+          <input type="text" name="name" class="" id="name" placeholder="Enter your name" required>
+        </div>
+
+        <!-- EMAIL -->
+        <div class="form-content">
+          <label for="email" class="" id="email-label">Email</label>
+          <input type="email" name="email" class="" id="email" placeholder="Enter your email" required>
+        </div>
+
+        <!-- NUMBER/AGE -->
+        <div class="form-content">
+          <label for="age" class="" id="number-label">Age</label>
+          <input type="number" name="age" class="" id="number" pattern="[0-9]{2}" min="8" max="60"  placeholder="Age" required>
+        </div>
+
+        <!-- DROPDOWN -->
+        <div class="form-content dropdown-div">
+          <p class="dropdown-label">Which option describes your current role?</p>
+          <select name="role" class="dropdown" id="dropdown"required>
+            <option disabled selected>Select your current role</option>
+            <option value="student">Student</option>
+            <option value="job">Full-time Job</option>
+            <option value="preferNotToSay">Prefer not to say</option>
+            <option value="other">Other</option>
+          </select>
+        </div>
+
+        <!-- RADIO BUTTONS -->
+        <div class="form-content">
+          <p>Would you reccommend CodeWars to other?</p>
+          <div class="radio-btns">
+            <label for="definitely" class="radio-label">
+              <input type="radio" name="user-reccommendation" value="definitely" class="radio" checked>
+              Definitely
+            </label>
+
+            <label for="maybe" class="radio-label">
+              <input type="radio" name="user-reccommendation" value="maybe" class="radio">
+              Maybe
+            </label>
+
+            <label for="not-sure" class="radio-label">
+              <input type="radio" name="user-reccommendation" value="not-sure" class="radio">
+              Not Sure
+            </label>
+          </div>
+        </div>
+
+        <!-- CHECKBOX-1 -->
+        <div class="form-content">
+          <p>What do you like the most about CodeWars? (Check all that apply)</p>
+          <div class="checkbox-div">
+            <label for="code-battles">
+              <input type="checkbox" value="code-battles" name="most-liked" class="">
+                Code Battles
+              </label>
+              <label for="surprise-quiz">
+                <input type="checkbox" value="surprise-quiz" name="most-liked" class="">
+                Surprise Quiz
+              </label>
+              <label for="code-puzzles">
+                <input type="checkbox" value="code-puzzles" name="most-liked" class="">
+                Code Puzzles
+              </label>
+              <label for="community">
+                <input type="checkbox" value="community" name="most-liked" class="">
+                Community
+              </label>
+          </div>
+        </div>
+
+        <!-- CHECKBOX-2 -->
+        <div class="form-content">
+          <p>What would you liked to see improved? (Check all that apply)</p>
+          <div class="checkbox-div">
+            <label for="front-end-projects">
+              <input type="checkbox" value="front-end-projects" name="improvements" class="">
+                Front-end Projects
+              </label>
+              <label for="back-end-projects">
+                <input type="checkbox" value="back-end-projects" name="improvements" class="">
+                Back-end Projects
+              </label>
+              <label for="challenges">
+                <input type="checkbox" value="challenges" name="improvements" class="">
+                Challenges
+              </label>
+              <label for="opensource-community">
+                <input type="checkbox" value="opensource-community" name="improvements" class="">
+                Open Source Community
+              </label>
+              <label for="forum">
+                <input type="checkbox" value="forum" name="improvements" class="">
+                Forum
+              </label>
+          </div>
+        </div>
+
+        <!-- COMMENTS/TEXTAREA -->
+        <div class="form-content">
+          <p>Any comments or suggestions?</p>
+          <textarea name="comments" class="comments-area" placeholder="Enter your comments here..." cols="30" rows="6"></textarea>
+        </div>
+
+        <!-- SUBMIT BUTTON -->
+        <div class="form-content">
+          <button type="submit" class="submit-btn" id="submit">Submit</button>
+        </div>
+      </form>
+    </div>
+  </body>
+  <!-- BODY END -->
+</html>
